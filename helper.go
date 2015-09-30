@@ -103,6 +103,7 @@ func isRecordExists(client *cf.Client, domain string, name string) (bool, cf.Rec
 
 	if err != nil {
 		log.Println(err.Error())
+		return false, record
 	}
 
 	for _, rec := range records {
@@ -116,7 +117,5 @@ func isRecordExists(client *cf.Client, domain string, name string) (bool, cf.Rec
 }
 
 func isValidIPv4(ipStr string) bool {
-	IpAddr := net.ParseIP(ipStr)
-
-	return IpAddr.To4() != nil
+	return net.ParseIP(ipStr).To4() != nil
 }

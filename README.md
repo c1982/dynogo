@@ -4,16 +4,20 @@ Bu uygulama sahip olduğunuz internet IP adresinizi CloudFlare üzerindeki DNS k
 
 **Parametreler**
 
--email:
+-email
+
 CloudFlare'e giriş yaparken kullandığınız email.
 
--domain:
+-domain
+
 CloudFlare üzerindeki domain adı. Name Server'ları CloudFlare Name Server'larına yönlendirilmiş olması gerekir.
 
--name:
+-name
+
 DNS adresinin ismi. Domain adı, alanadi.com ise buraya yazacağınız isim önüne eklenir. office.alanadi.com gibi. Bu isim ise A record tipinde DNZ alanına otomatikman eklenir.
 
--token:
+-token
+
 CloudFlare API Key. CloudFlare hesabınıza ulaşmak için kullanılır. CloudFlare'a login olduktan sonra My Account bölümünden oluşturabilirsiniz.
 
 
@@ -32,4 +36,6 @@ Uygulamayı Windows üzerinde zamanlanmış görevlere veya Linux üzerinde cron
 **Linux;**
 
 	@hourly /usr/bin/dynogo -email=MAIL -token=TOKEN -domain=DOMAIN -name=NAME
-
+	
+	
+> CloudFlare API'si için [github.com/pearkes/CloudFlare]() Kullanılmıştır.
